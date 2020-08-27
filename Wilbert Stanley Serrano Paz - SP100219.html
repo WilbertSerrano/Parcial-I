@@ -11,17 +11,34 @@
 
         //1- Subir este archivo a github, generando dos commits bajo los siguientes nombres clave: "Creación del repositorio" y "Parcial finalizado" - Vale por 2 puntos
 
-        //2- En el siguiente String se habla acerca de las tecnologías que componen el frontend, haciendo uso de los métodos de tipo string, reemplar alguna de las tecnologías en caso de ser necesario, de lo contrario reflejen su respuesta igualmente en el console.lo
+        //2- En el siguiente String se habla acerca de las tecnologías que componen el frontend, haciendo uso de los métodos de tipo string, reemplazar alguna de las tecnologías en caso de ser necesario, de lo contrario reflejen su respuesta igualmente en el console.log.
         const frontend = 'En el frontend existen 3 tecnologías principales, las cuales son: HTML, CSS y Angular'
+        let tecnologiasFrontend = frontend.replace('Angular', 'JavaScript');
+        console.log(`EJERCICIO 2: El String fue corregido a: ${tecnologiasFrontend}`);
 
         //3- En siguiente Array se deberían ver reflejados los 12 meses del año, sin embargo al momento de realizarlo, la persona cometió algunas equivocaciones, por lo que es necesario que sea corregido. Para ello haz uso de los métodos de tipo Array. Igualmente, reflejar la respuesta final en un console.log.
-        const meses = ['Lunes', 'Febrero', 'Abril', 'Marzo', 'Mayo', 'Junio', 'Agosoto', 'Septiembre', 'Neptuno', 'Noviembre', 'Plutón'];
+        const meses = ['Lunes', 'Febrero', 'Abril', 'Marzo', 'Mayo', 'Junio', 'Agosto', 'Septiembre', 'Neptuno', 'Noviembre', 'Plutón'];
+        meses.shift('Lunes');
+        meses.unshift('Enero');
+        meses.splice(2, 1);
+        meses.splice(3, 0, 'Abril');
+        meses.splice(6, 0, 'Julio');
+        meses.splice(9, 1, 'Octubre');
+        meses.pop();
+        meses.push('Diciembre');
+        console.log(`EJERCICIO 3: Los meses del año son: ${meses}`);
 
         //4- Resuelve el siguiente ejercicio: Alejandra tiene 4 años, su hermano tiene el triple de esta edad menos 4, y su mamá tiene el triple de la suma de las edades de ambos. ¿Cuál es la edad de la mamá de Alejandra? 
             //TIPS
             //-Todo el proceso debe ser representado en código
             //-Puede que lo más recomendable sea generar una variable por persona, de tal forma que puedan distinguirse fácilmente las edades y los procesos matemáticos utilizados para cada calculo o simplemente reflejar un dato
             //-No te olvides de las leyes de los signos, en javascript, puedes hacer uso de parentesis en operaciones matemáticas, indicando que todo lo que esté dentro de estos debe realizarse primero.
+            let edadAlejandra = 4;
+            console.log(`EJERCICIO 4: Alejandra tiene ${edadAlejandra} años`);
+            let edadHermano = (edadAlejandra * 3) - 4;
+            console.log(`El hermano de Alejandra tiene ${edadHermano} años`);
+            let edadMama = (edadAlejandra + edadHermano) * 3;
+            console.log(`La mamá de Alejandra tiene ${edadMama} años`);
 
         //NOTA: La resolución del parcial deberá realizarse en este mismo archivo para evitar complicaciones. Además, reemplazar la palabra "parcial" y en su lugar colocar su nombre completo seguido de su carnet. Mientras que el repositorio deberá llamarse "Parcial I"
     </script>
